@@ -1,59 +1,12 @@
-## PeerJS Video Calling App
+# React + Vite
 
-A minimal multi-peer video calling demo built with React 19, Vite, TailwindCSS v4 and PeerJS.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### Features
+Currently, two official plugins are available:
 
--   Unique peer ID on load
--   Call any peer by their ID
--   Auto-answer incoming calls
--   Multiple remote stream tiles
--   Toggle audio & video
--   Screen sharing (replaces video track until stopped)
--   Responsive layout using Tailwind
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### Install
+## Expanding the ESLint configuration
 
-```bash
-npm install
-```
-
-### Run Dev
-
-```bash
-npm run dev
-```
-
-Open the dev URL in two browsers / devices. Copy one ID into the other and press Call.
-
-### Production Build
-
-```bash
-npm run build
-npm run preview
-```
-
-### Screen Share
-
-Click Share Screen. When you stop sharing the camera feed resumes automatically.
-
-### Optional: Self-host PeerServer
-
-```bash
-npx peerjs --port 9000
-```
-
-Then edit `PeerContext.jsx` Peer constructor:
-
-```js
-const peer = new Peer(id, { host: "localhost", port: 9000, path: "/" });
-```
-
-### Future Enhancements
-
--   Data channel chat
--   Better reconnection logic
--   Mute / speaking indicators
--   Room codes & lobby
-
-MIT License
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
